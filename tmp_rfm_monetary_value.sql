@@ -1,3 +1,10 @@
+create table tmp_rfm_monetary_value
+(
+	user_id INT NOT NULL PRIMARY KEY,
+	monetary_value INT NOT NULL CHECK(monetary_value >= 1 AND monetary_value <= 5)
+);
+
+INSERT INTO  tmp_rfm_monetary_value
 WITH i as (
 	select id, COALESCE(order_sum, 0) as order_sum, row_number() OVER (ORDER BY COALESCE(order_sum, 0))as ran from
 	(

@@ -1,3 +1,10 @@
+create table tmp_rfm_frequency
+(
+	user_id INT NOT NULL PRIMARY KEY,
+	frequency INT NOT NULL CHECK(frequency >= 1 AND frequency <= 5)
+);
+
+INSERT INTO  tmp_rfm_frequency
 WITH i as (
 	select id, COALESCE(order_count, 0) as order_count, row_number() OVER (ORDER BY COALESCE(order_count, 0))as ran from
 	(
