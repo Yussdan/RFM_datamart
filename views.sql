@@ -24,3 +24,4 @@ create MATERIALIZED VIEW analysis.view_orderstatuslog AS (
 ); 
  /* для перерасчета view_orders в запросе orders_view.sql /*
 
+/* хоть в задаче и сказано что обновлять витрину не надо, я подумал если вдруг значения в схеме product изменятся можно будет проще обновить view-ки/*
