@@ -16,15 +16,19 @@
 | -------------------      | -------------------------| ---------------                 | ---------------------                             |
 | production.Products      | id                       | Первичный ключ                  | Обеспечивает уникальность записей о пользователях |
 | production.Products      | price                    | Ограничение                     | Проверяет чтоб price была >=0                     |
+
 | production.orderitems    | id                       | Первичный ключ                  | Обеспечивает уникальность записей о пользователях |
 | production.orderitems    | product_id               | Ограничение                     | Обеспечивает уникальность записей о продукте      |
 | production.orderitems    | order_id                 | Ограничение                     | Обеспечивает уникальность записей о заказе        |
 | production.orderitems    | price                    | Ограничение                     | Проверяет чтоб цена была >=0                      |
 | production.orderitems    | discount                 | Ограничение                     | Проверяет чтоб discount>0 и discount < price      |
 | production.orderitems    | quantity                 | Ограничение                     | Проверяет чтоб quantity  была >=0                 |
+
 | production.orders        | cost                     | Ограничение                     | Обеспечивает уникальность записей о пользователях |
 | production.orders        | order_id                 | Первичный ключ                  | Обеспечивает уникальность записей о заказах       |
+
 | production.orderstatuses | id                       | Первичный ключ                  | Обеспечивает уникальность записей о статусе товара|
+
 | production.users         | id                       | Первичный ключ                  | Обеспечивает уникальность записей о пользователях |
 
 

@@ -1,19 +1,26 @@
-create MATERIALIZED VIEW view_OrderItems AS (
+DROP MATERIALIZED view if exists analysis.view_OrderItems; 
+create MATERIALIZED VIEW analysis.view_OrderItems AS (
 	SELECT * FROM production.orderitems o 
 );
-create MATERIALIZED VIEW view_OrderStatuses AS (
+DROP MATERIALIZED view if exists analysis.view_OrderStatuses; 
+create MATERIALIZED VIEW analysis.view_OrderStatuses AS (
 	SELECT * FROM production.orderstatuses o 
 );
-create MATERIALIZED VIEW view_Products AS (
+DROP MATERIALIZED view if exists analysis.view_Products; 
+create MATERIALIZED VIEW analysis.view_Products AS (
 	SELECT * FROM production.products p 
 );
-create MATERIALIZED VIEW view_Orders AS (
+DROP MATERIALIZED view if exists analysis.view_Orders; 
+create MATERIALIZED VIEW analysis.view_Orders AS (
 	SELECT * FROM production.orders o 
 );
-create MATERIALIZED VIEW view_user AS (
-	SELECT * FROM production.user u
+DROP MATERIALIZED view if exists analysis.view_user; 
+create MATERIALIZED VIEW analysis.view_user AS (
+	SELECT * FROM production.users u
 );
-create MATERIALIZED VIEW view_orderstatuslog AS (
+DROP MATERIALIZED view if exists analysis.view_orderstatuslog; 
+create MATERIALIZED VIEW analysis.view_orderstatuslog AS (
 	SELECT * FROM production.orderstatuslog u
-); /* для перерасчета view_orders в запросе orders_view.sql /*
+); 
+ /* для перерасчета view_orders в запросе orders_view.sql /*
 

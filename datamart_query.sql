@@ -1,8 +1,9 @@
-INSERT into dm_rfm_segments
+INSERT into analysis.dm_rfm_segments
 select * from 
-tmp_rfm_frequency inner join tmp_rfm_monetary_value using(user_id)
-inner join tmp_rfm_recency using(user_id)
-user id | frequency | monetary_value | recency
+analysis.tmp_rfm_frequency inner join analysis.tmp_rfm_monetary_value using(user_id)
+inner join analysis.tmp_rfm_recency using(user_id)
+ORDER BY user_id
+user id | frequency | monetary_value | recency      
 0	    |3          |4               |1
 1	    |3          |3               |4
 2	    |3          |5               |2
@@ -14,3 +15,5 @@ user id | frequency | monetary_value | recency
 8	    |1          |3               |1
 9	    |3          |2               |1
 10	    |5          |2               |3
+
+
